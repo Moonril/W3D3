@@ -18,7 +18,7 @@ pageForm.addEventListener('submit', (e) => {
     
     shoppingDiv.innerHTML = `
     <li id='check-me'>${newItemValue.newItem}</li>
-    <button class='check-button' onclick='checkItem'>&#10004;</button>
+    <button class='check-button' onclick='checkItem(event)'>&#10004;</button>
     <button class='delete-button' onclick='deleteItem(event)'>X</button>
     `
     //appen child
@@ -34,7 +34,7 @@ pageForm.addEventListener('submit', (e) => {
 })
 
 // deve creare un div contentente:
-// deve creare un 'p' contenente il value dell'input
+// deve creare un 'li' contenente il value dell'input
 // deve avere un tasto delete
 // deve avere un tasto complete che sbarra il testo del 'p' 
 
@@ -47,10 +47,10 @@ const checkItem = function(e) {
 
     const pressedButton = e.target
 
-    const itemToCheck = pressedButton.getElementById('check-me')
+    const itemToCheck = document.getElementById('check-me')
     console.log(pressedButton)
 
-    itemToCheck.style.textDecoration = 'overline'
+    itemToCheck.style.textDecoration = 'line-through'
 
 }
 

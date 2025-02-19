@@ -3,7 +3,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-image: url('./water.jpeg');
-    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: 100%;
     text-align: center;
 }
 
@@ -24,12 +25,21 @@ label {
     border: 1px solid black;
     font-size: 3.2em;
     padding: 50px;
+    text-align: center;
 }
 
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+ul li {
+    display: inline;
+    font-size: 0.5em;
+    text-align: left;
+    
+
 }
 
 form {
