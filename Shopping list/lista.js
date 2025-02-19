@@ -17,11 +17,15 @@ pageForm.addEventListener('submit', (e) => {
     shoppingDiv.classList.add('shopping-div')
     
     shoppingDiv.innerHTML = `
-    <li id='check-me'>${newItemValue.newItem}</li>
+    <li id='check-me'><span id='check-me'>${newItemValue.newItem}</span></li>
     <button class='check-button' onclick='checkItem(event)'>&#10004;</button>
     <button class='delete-button' onclick='deleteItem(event)'>X</button>
     `
-    //appen child
+    //circorda il testo del 'li' con uno span per far sì che sbarri solo il testo. fatto
+
+
+
+    //append child
     const ulList = document.getElementById('ul-list')
     ulList.appendChild(shoppingDiv)
 
@@ -48,9 +52,10 @@ const checkItem = function(e) {
     const pressedButton = e.target
 
     const itemToCheck = document.getElementById('check-me')
-    console.log(pressedButton)
+    console.log('CHECK', pressedButton)
 
     itemToCheck.style.textDecoration = 'line-through'
+    itemToCheck.style.color = 'grey'
 
 }
 
